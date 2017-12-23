@@ -12,7 +12,7 @@ The purpose of this implementation is Well-structured, reusable and easily under
 - System
     - Linux or macOS
     - CPU or (NVIDIA GPU + CUDA CuDNN)
-        -It can run on Single CPU/GPU or Multi GPUs.
+        - It can run on Single CPU/GPU or Multi GPUs.
     - Python 3
 
 - Libraries
