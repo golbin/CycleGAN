@@ -81,8 +81,8 @@ Use `python train.py --help` to see more options.
 
 # TODO
 
-- [] Visualizing training progress with Visdom
-- [] Add some nice generated images and videos :-)
+- [ ] Visualizing training progress with Visdom
+- [ ] Add some nice generated images and videos :-)
 
 ## References
 
