@@ -79,6 +79,11 @@ Use `python train.py --help` to see more options.
 - `train.py` : A script for CycleGAN training
 - `transfer.py` : A script for transferring with pre-trained model
 
+# TODO
+
+- [] Visualizing training progress with Visdom
+- [] Add some nice generated images and videos :-)
+
 ## References
 
 - https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix
