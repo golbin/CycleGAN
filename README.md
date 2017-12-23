@@ -62,7 +62,7 @@ python transfer.py \
     --out_dir=./outputs/testA
 ```
 
-Use `python train.py --help` to see more options.
+Use `python transfer.py --help` to see more options.
 
 ## File structures
 
