@@ -8,8 +8,8 @@ from enum import Enum
 
 import torch
 
-import cyclegan.ops as ops
-from cyclegan.data import ImagePool
+import cyclegan.utils.ops as ops
+from cyclegan.utils.data import ImagePool
 from cyclegan.network import Generator, Discriminator
 
 
@@ -62,6 +62,7 @@ class CycleGAN:
     def _prepare_for_gpu(self):
         if torch.cuda.device_count() > 1:
             print("{0} GPUs are detected.".format(torch.cuda.device_count()))
+
             self.G_AB = torch.nn.DataParallel(self.G_AB)
             self.G_BA = torch.nn.DataParallel(self.G_BA)
             self.D_A = torch.nn.DataParallel(self.D_A)
@@ -197,6 +198,8 @@ class CycleGAN:
         :param discriminator: True/False
         :return:
         """
+        print("Loading model from {0}".format(model_dir))
+
         if generator is ['AtoB', 'ALL']:
             self.G_AB.load_state_dict(torch.load(os.path.join(model_dir, 'generator_AB_param.pkl')))
 
@@ -208,6 +211,8 @@ class CycleGAN:
             self.D_B.load_state_dict(torch.load(os.path.join(model_dir, 'discriminator_B_param.pkl')))
 
     def save(self, model_dir):
+        print("Saving model into {0}".format(model_dir))
+
         torch.save(self.G_AB.state_dict(), os.path.join(model_dir, 'generator_AB_param.pkl'))
         torch.save(self.G_BA.state_dict(), os.path.join(model_dir, 'generator_BA_param.pkl'))
         torch.save(self.D_A.state_dict(), os.path.join(model_dir, 'discriminator_A_param.pkl'))

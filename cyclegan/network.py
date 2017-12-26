@@ -4,7 +4,7 @@ The neural network architecture of Cycle GAN
 import torch
 import torch.nn.modules
 
-from cyclegan.ops import Activation, normal_weights_initializer
+from cyclegan.utils.ops import Activation, normal_weights_initializer
 
 
 class ConvLayer(torch.nn.Module):

@@ -3,11 +3,11 @@ A script for CycleGAN training
 """
 import os
 
-import cyclegan.utils as utils
 import cyclegan.config as config
-from cyclegan.logger import Logger
+from cyclegan.utils import tester
+from cyclegan.utils.logger import Logger
 from cyclegan.model import CycleGAN
-from cyclegan.data import DataLoader
+from cyclegan.utils.data import DataLoader
 
 
 class Trainer:
@@ -41,7 +41,7 @@ class Trainer:
             self.logger.print_avg_loss()
 
             if self.args.test_data_A_dir and self.args.test_data_B_dir:
-                utils.generate_testset(epoch, self.cycleGAN, self.args)
+                tester.generate_testset(epoch, self.cycleGAN, self.args)
 
         self.cycleGAN.save(args.model_dir)
 

@@ -70,12 +70,13 @@ Use `python transfer.py --help` to see more options.
 
 - cyclegan
     - `config.py` : Training options
-    - `data.py` : Utilities for loading data
-    - `logger.py` : Utilities for logging
     - `network.py` : The neural network architecture of Cycle GAN
     - `model.py` : Calculate loss and optimizing
-    - `ops.py` : Utilities for tensor operations
-    - `utils.py` : Utility functions especially for testing
+    - utils
+        - `data.py` : Utilities for loading data
+        - `logger.py` : Utilities for logging
+        - `ops.py` : Utilities for tensor operations
+        - `tester.py` : Utility functions especially for testing
 - `train.py` : A script for CycleGAN training
 - `transfer.py` : A script for transferring with pre-trained model
 

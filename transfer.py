@@ -7,7 +7,7 @@ import scipy.misc as misc
 
 import cyclegan.config as config
 from cyclegan.model import CycleGAN
-from cyclegan.data import load_file
+from cyclegan.utils.data import load_file
 
 
 class Transfer:

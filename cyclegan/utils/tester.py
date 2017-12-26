@@ -5,7 +5,7 @@ import os
 
 import scipy.misc as misc
 
-from cyclegan.data import DataLoader
+from cyclegan.utils.data import DataLoader
 
 
 def get_test_output_file_path(prefix, subdir):

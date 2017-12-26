@@ -10,7 +10,7 @@ import torch
 import torch.utils.data as data
 from torchvision import transforms
 
-import cyclegan.ops as ops
+import cyclegan.utils.ops as ops
 
 
 class Dataset(data.Dataset):
